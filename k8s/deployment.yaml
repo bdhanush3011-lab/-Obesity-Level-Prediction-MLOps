@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: obesity-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: obesity-api
+  template:
+    metadata:
+      labels:
+        app: obesity-api
+    spec:
+      containers:
+        - name: obesity-api
+          image: obesity-level-api:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 20

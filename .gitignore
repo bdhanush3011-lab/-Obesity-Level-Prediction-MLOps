@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# MLflow
+mlflow.db
+mlruns/*
+!mlruns/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+*.log
+
+# Data files
+data/processed/*
+!data/processed/.gitkeep
+data/incoming/*
+!data/incoming/.gitkeep
+
+# Models
+models/*
+!models/.gitkeep
+registry/
+
+# Deployment artifacts
+deployment/model.pkl
+deployment/model_metadata.json
+
+# Generated artifacts
+artifacts/*
+!artifacts/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Temporary files
+.DS_Store
+.vscode/
+*.tmp

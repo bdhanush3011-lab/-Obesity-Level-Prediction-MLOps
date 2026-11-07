@@ -1,0 +1,13 @@
+project:
+  name: Obesity_Level_Prediction
+  target: NObeyesdad
+  random_state: 42
+quality_gate:
+  accuracy: 0.90
+  f1_macro: 0.90
+monitoring:
+  psi_warning_threshold: 0.20
+  retrain_on_drift: true
+api:
+  host: 0.0.0.0
+  port: 8000

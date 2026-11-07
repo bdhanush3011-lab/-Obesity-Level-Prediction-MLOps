@@ -1,0 +1,8 @@
+services:
+  obesity-api:
+    build: .
+    image: obesity-level-api:1.0
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs

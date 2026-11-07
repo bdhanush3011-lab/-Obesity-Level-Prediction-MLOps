@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "failures": {},
+  "metrics": {
+    "accuracy": 0.9784688995215312,
+    "f1_macro": 0.977856695645529,
+    "rows": 2087,
+    "duplicates_removed": 24,
+    "classes": [
+      "Insufficient_Weight",
+      "Normal_Weight",
+      "Overweight_Level_I",
+      "Overweight_Level_II",
+      "Obesity_Type_I",
+      "Obesity_Type_II",
+      "Obesity_Type_III"
+    ],
+    "random_state": 42
+  }
+}
